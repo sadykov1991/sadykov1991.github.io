@@ -1,0 +1,92 @@
+.section-menu {
+    background: url('/img/menu/menu-bg.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    .container {
+      width: 100%;
+      margin: 0;
+      
+      max-width: 1100px;
+    
+    }
+   
+}
+.titles__heading{
+  color: white;
+}
+.titles__titles__heading{
+  color: black;
+}
+.heading {
+  font-size: 3.75rem;
+}
+.menu__title {
+  position: relative;
+  padding-left: 7.28%;
+  padding-top: 9.46%;
+  color: inherit;
+  z-index: 10;
+}
+    .menu {
+      display: flex;
+      justify-content: flex-end;
+      width: 60%;
+      margin: 0; padding: 0;
+      position: absolute;
+      right: 0; top: 0; bottom: 0;
+      &__item {
+        display: flex;
+        cursor: pointer;
+        &.is-active > .menu__description {
+          max-width: 100vw;
+          color: white;
+        }
+        &.is-active p {
+          opacity: 1;
+        }
+        
+      } 
+      &__heading {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 80px;
+        .heading {
+          writing-mode: tb-rl;
+          margin: 0;
+          font-size: 40px;
+          padding: 40px 20px;
+        }
+
+        &.for-milk {
+          background-image: url('/img/menu/сoconut-bars.jpg');
+          background-color: rgba(20, 20, 20, 0.7) ;
+        }
+        &.for-berries {
+          background-image: url('/img/menu/honey-bars.jpg');
+        }
+        &.for-honey {
+          background-image: url('/img/menu/berries-bars.jpg');
+        }
+      }
+      &__overlay {
+        background-color: rgba(20, 20, 20, 0.7);
+        height: 100%;
+        transform: rotate(180deg);
+      }
+      &__description {
+        background-color: rgba(47, 50, 52, .9);
+        overflow:hidden;
+        max-width: 0;
+        transition: max-width .3s;
+        p {
+          padding: 60px 30px;
+          margin: 0;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 24px;
+          opacity: 0;
+          transition: opacity .1s;
+        }
+      }
+    }
+  
